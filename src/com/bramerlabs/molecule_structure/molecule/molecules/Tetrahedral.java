@@ -23,7 +23,7 @@ public class Tetrahedral extends Molecule {
     public Tetrahedral(Vector3f position, float bondLength) {
         super();
         for (float[] a : positions) {
-            this.addAtom(new Atom(new Vector3f(a).normalize(bondLength)));
+            this.addAtom(new Atom(new Vector3f(a).normalize(bondLength).add(position)));
         }
     }
 }
