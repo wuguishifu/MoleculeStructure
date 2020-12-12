@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Molecule Structure:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Molecule_Structure_jar</output-path>
+    <root id="archive" name="Molecule Structure.jar">
+      <element id="module-output" name="Molecule Structure" />
+    </root>
+  </artifact>
+</component>
