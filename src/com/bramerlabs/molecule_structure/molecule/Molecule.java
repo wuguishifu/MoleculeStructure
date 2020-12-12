@@ -1,7 +1,5 @@
 package com.bramerlabs.molecule_structure.molecule;
 
-import com.bramerlabs.molecule_structure.math.Vector3f;
-
 import java.util.ArrayList;
 
 public class Molecule {
