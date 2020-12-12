@@ -141,6 +141,9 @@ public class Vector3f {
      * @return - this vector
      */
     public Vector3f normalize() {
+        if (this.equals(new Vector3f(0, 0, 0))) {
+            return this;
+        }
         float length = (float)Math.sqrt(x * x + y * y + z * z);
         this.x /= length;
         this.y /= length;
@@ -154,6 +157,9 @@ public class Vector3f {
      * @return - this vector
      */
     public Vector3f normalize(float r) {
+        if (this.equals(new Vector3f(0, 0, 0))) {
+            return this;
+        }
         float length = (float)Math.sqrt(x * x + y * y + z * z);
         float v = length/r;
         this.x /= v;
