@@ -13,7 +13,7 @@ public class Planar extends Molecule {
     private float bondLength;
 
     // vectors representing the direction of the bonds
-    private final static float[][] positions = new float[][]{{0, 0, 0}, {0, 1, 0}, {0, -1, 0}};
+    private final static float[][] positions = new float[][]{{0, 0, 0}, {1, 0, 0}, {-1, 0, 0}};
     public final static int numAtoms = 3;
 
     /**
