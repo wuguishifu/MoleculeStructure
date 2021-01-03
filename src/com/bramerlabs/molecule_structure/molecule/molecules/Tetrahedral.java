@@ -34,12 +34,11 @@ public class Tetrahedral extends Molecule {
      * @param b - the length of the bonds
      */
     public Tetrahedral(float[] p, float b) {
-        Vector3f v = new Vector3f(
+        this(new Vector3f(
                 p.length > 0 ? p[0] : 0,
                 p.length > 1 ? p[1] : 0,
                 p.length > 2 ? p[2] : 0
-        );
-        new Tetrahedral(v, b);
+        ), b);
     }
 
     /**
@@ -50,6 +49,6 @@ public class Tetrahedral extends Molecule {
      * @param b - bond length
      */
     public Tetrahedral(float x, float y, float z, float b) {
-        new Tetrahedral(new Vector3f(x, y, z), b);
+        this(new Vector3f(x, y, z), b);
     }
 }
