@@ -34,12 +34,11 @@ public class Octahedron extends Molecule {
      * @param b - bond length
      */
     public Octahedron(float[] p, float b) {
-        Vector3f v = new Vector3f(
+        this(new Vector3f(
                 p.length > 0 ? p[0] : 0,
                 p.length > 1 ? p[1] : 0,
                 p.length > 2 ? p[2] : 0
-        );
-        new Bent(v, b);
+        ), b);
     }
 
     /**
@@ -50,7 +49,7 @@ public class Octahedron extends Molecule {
      * @param b - bond length
      */
     public Octahedron(float x, float y, float z, float b) {
-        new Bent(new Vector3f(x, y, z), b);
+        this(new Vector3f(x, y, z), b);
     }
 
 }
