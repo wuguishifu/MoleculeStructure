@@ -19,12 +19,38 @@ public class Planar extends Molecule {
     /**
      * constructor for a specified position
      * @param position - a Vector3f representing the center point of the molecule (usually the central atom)
+     * @param bondLength - the length of the bonds
      */
     public Planar(Vector3f position, float bondLength) {
         super();
         for (float[] a : positions) {
             this.addAtom(new Atom(new Vector3f(a).normalize(bondLength).add(position)));
         }
+    }
+
+    /**
+     * constructor for position and bond length
+     * @param p - the position
+     * @param b - the bond length
+     */
+    public Planar(float[] p, float b) {
+        Vector3f v = new Vector3f(
+                p.length > 0 ? p[0] : 0,
+                p.length > 1 ? p[1] : 0,
+                p.length > 2 ? p[2] : 0
+        );
+        new Planar(v, b);
+    }
+
+    /**
+     * constructor for position and bond length
+     * @param x - x position
+     * @param y - y position
+     * @param z - z position
+     * @param b - bond length
+     */
+    public Planar(float x, float y, float z, float b) {
+        new Planar(new Vector3f(x, y, z), b);
     }
 
 }
